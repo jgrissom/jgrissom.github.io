@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="32 32 32 32" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+<svg viewBox="32 32 32 32" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style bx:fonts="Alfa Slab One">@import url(https://fonts.googleapis.com/css2?family=Alfa+Slab+One%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
     <radialGradient gradientUnits="userSpaceOnUse" cx="48" cy="45" r="16.008" id="gradient-1" spreadMethod="pad" gradientTransform="matrix(-0.187194, 1.307499, -1.51573, -0.217006, 125.193123, -7.994645)">
       <stop offset="0" style="stop-color: rgb(85.49% 41.176% 33.333%)"/>
       <stop offset="1" style="stop-color: rgb(58.245% 17.011% 12.613%)"/>
     </radialGradient>
   </defs>
-  <text style="fill: url('#gradient-1'); font-family: 'Alfa Slab One'; font-size: 46px; stroke: rgb(0, 0, 0); white-space: pre;" x="31.992" y="61.175">n</text>
+  <path d="M 63.364 53.631 L 63.364 61.175 L 48.828 61.175 L 48.828 53.631 L 50.76 53.631 L 50.76 46.087 Q 50.76 44.569 50.116 43.856 Q 49.472 43.143 48.184 43.143 Q 45.424 43.143 45.424 46.087 L 45.424 53.631 L 47.356 53.631 L 47.356 61.175 L 32.82 61.175 L 32.82 53.631 L 34.844 53.631 L 34.844 43.143 L 32.82 43.143 L 32.82 35.599 L 45.424 35.599 L 45.424 39.187 Q 48.736 34.955 53.704 34.955 Q 57.522 34.955 59.431 37.347 Q 61.34 39.739 61.34 43.925 L 61.34 53.631 Z" style="fill: url('#gradient-1'); stroke: rgb(0, 0, 0);"/>
 </svg>
