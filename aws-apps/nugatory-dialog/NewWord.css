@@ -4,61 +4,56 @@
   left: 50%;
   translate: -50% -50%;
   background-color: var(--main-bg-color);
-  box-shadow: 2px 2px 10px #1a1a1a;
+  box-shadow: 0.25rem 0.25rem 0.8rem #1a1a1a;
   border: 1px solid #1a1a1a;
-  border-radius: 8px;
-  width: 400px;
+  border-radius: 0.5rem;
   display: grid;
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(6, minmax(3.2rem, 3.2rem));
   justify-items: center;
   align-items: center;
   row-gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   z-index: 100;
 }
 #dialog > #word-display {
-  text-shadow: 0px 0px 4px rgb(255, 255, 255);
   font-size: 2.8rem;
-  transform: translateY(0.5rem);
 }
 #dialog > .color-div {
   display: flex;
-  gap: 10px;
+  gap: 0.7rem;
   align-items: center;
 }
 #dialog > .color-div > .color-square {
-  border-radius: 4px;
+  border-radius: 0.3rem;
   height: 2.6rem;
   width: 2.6rem;
 }
 #dialog > .color-div > .value {
   color: var(--white-color);
   text-align: right;
-  width: 2.8rem;
+  width: 2.2rem;
 }
 #dialog #new-word {
-  width: 16.4rem;
+  width: 15.6rem;
   line-height: 1.9em;
-  padding: 0 8px;
+  padding: 0 0.5rem;
 }
 #dialog > .color-div > .value,
 #dialog #new-word,
 button {
-  font-family: "Roboto", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1.6rem;
+  font: normal 500 1.6em "Teko", sans-serif;
+  font-optical-sizing: auto;
 }
 #dialog #new-word,
 button {
   outline: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 #dialog button {
   width: 8.2rem;
   height: 2.8rem;
-  margin: 0 7px;
+  margin: 0 0.2rem;
   background-color: var(--button-color);
   color: var(--white-color);
   transition: all 400ms ease-in-out;
