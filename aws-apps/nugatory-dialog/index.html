@@ -22,50 +22,55 @@
     <link rel="stylesheet" type="text/css" href="NewWord.css" />
   </head>
   <body>
-    <div id="overlay"></div>
-    <div id="dialog">
-      <div
-        id="word-display"
-        style="text-shadow: 0 0 0.25rem rgb(255, 255, 255)"
-      >
-        new word
+    <form>
+      <div id="overlay"></div>
+      <div id="dialog">
+        <div id="word-display" style="text-shadow: 0 0 0.25rem white">
+          nugatory
+        </div>
+        <div class="color-div">
+          <div
+            class="color-square"
+            style="background-color: rgb(255, 0, 0)"
+          ></div>
+          <input type="range" name="red" min="0" max="255" value="255" />
+          <div class="value">255</div>
+        </div>
+        <div class="color-div">
+          <div
+            class="color-square"
+            style="background-color: rgb(0, 255, 0)"
+          ></div>
+          <input type="range" name="green" min="0" max="255" value="255" />
+          <div class="value">255</div>
+        </div>
+        <div class="color-div">
+          <div
+            class="color-square"
+            style="background-color: rgb(0, 0, 255)"
+          ></div>
+          <input type="range" name="blue" min="0" max="255" value="255" />
+          <div class="value">255</div>
+        </div>
+        <div class="text-field">
+          <input
+            type="text"
+            id="new-word"
+            name="new-word"
+            placeholder="new word"
+            maxlength="16"
+            autocapitalize="off"
+            autocomplete="off"
+            autoCorrect="off"
+            autofocus
+          />
+        </div>
+        <div class="buttons">
+          <button disabled type="submit">save</button>
+          <button type="button">cancel</button>
+        </div>
       </div>
-      <div class="color-div">
-        <div
-          class="color-square"
-          style="background-color: rgb(255, 0, 0)"
-        ></div>
-        <input type="range" min="0" max="255" value="255" />
-        <div class="value">255</div>
-      </div>
-      <div class="color-div">
-        <div
-          class="color-square"
-          style="background-color: rgb(0, 255, 0)"
-        ></div>
-        <input type="range" min="0" max="255" value="255" />
-        <div class="value">255</div>
-      </div>
-      <div class="color-div">
-        <div
-          class="color-square"
-          style="background-color: rgb(0, 0, 255)"
-        ></div>
-        <input type="range" min="0" max="255" value="255" />
-        <div class="value">255</div>
-      </div>
-      <div>
-        <input
-          type="text"
-          id="new-word"
-          placeholder="new word"
-          maxlength="16"
-        />
-      </div>
-      <div>
-        <button type="submit">save</button>
-        <button>cancel</button>
-      </div>
-    </div>
+    </form>
+    <img src="plus-button.svg" alt="New Word" id="trigger" />
   </body>
 </html>
