@@ -37,6 +37,9 @@ form {
   gap: 0.7rem;
   align-items: center;
 }
+#dialog > .color-div > input[type="range"] {
+  width: 10rem;
+}
 #dialog > #word-display {
   font-size: 2.6rem;
   max-height: 3rem;
