@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Teko:wght@300..700&display=swap");
+    </style>
+    <style>
+      :root {
+        --main-bg-color: #242424;
+        --main-color: #242424f8;
+        --white-color: #e2e2e2;
+        --button-color: #5e5e5e;
+
+        color: var(--main-color);
+        background-color: var(--main-bg-color);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="NewWord.css" />
+  </head>
+  <body>
+    <form>
+      <div id="overlay"></div>
+      <div id="dialog">
+        <header>nugatory</header>
+        <div class="color">
+          <div class="color-square" style="background: rgb(255, 0, 0)"></div>
+          <input id="red" type="range" min="0" max="255" value="255" />
+          <div class="value">255</div>
+        </div>
+        <div class="color">
+          <div class="color-square" style="background: rgb(0, 255, 0)"></div>
+          <input id="green" type="range" min="0" max="255" value="255" />
+          <div class="value">255</div>
+        </div>
+        <div class="color">
+          <div class="color-square" style="background: rgb(0, 0, 255)"></div>
+          <input id="blue" type="range" min="0" max="255" value="255" />
+          <div class="value">255</div>
+        </div>
+        <div><input id="text" type="text" placeholder="new word" /></div>
+        <div><button disabled id="save">save</button></div>
+        <div><button id="cancel">cancel</button></div>
+      </div>
+    </form>
+    <img src="trigger.svg" alt="New Word" id="trigger" />
+  </body>
+</html>

@@ -1,0 +1,128 @@
+#trigger {
+  position: fixed;
+  left: 0.8rem;
+  bottom: 0.8rem;
+  cursor: pointer;
+  z-index: 80;
+  transform: scale(80%, 80%);
+  transition: transform 150ms ease-in-out;
+}
+#trigger:hover {
+  transform: rotate(90deg) scale(100%, 100%);
+}
+#dialog,
+#dialog * {
+  box-sizing: border-box;
+  border-radius: 0.3em;
+}
+#dialog {
+  background: var(--main-color);
+  box-shadow: 0.15rem 0.15rem 0.35rem #1a1a1a;
+  border: 0.1rem solid #1a1a1a;
+  padding: 0.8rem;
+  width: 278px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas:
+    "_header _header"
+    "_red    _red"
+    "_green  _green"
+    "_blue   _blue"
+    "_text   _text"
+    "_save   _cancel";
+}
+#dialog > header {
+  grid-area: _header;
+  text-shadow: 0 0 0.25rem white;
+  font: 2.5rem "Luckiest Guy", cursive;
+  text-align: center;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+#dialog > .color {
+  display: flex;
+  gap: 0.4rem;
+}
+#dialog > .color:has(> #red) {
+  grid-area: _red;
+}
+#dialog > .color:has(> #green) {
+  grid-area: _green;
+}
+#dialog > .color:has(> #blue) {
+  grid-area: _blue;
+}
+#dialog > div:has(> #text) {
+  grid-area: _text;
+}
+#dialog > div:has(> #save) {
+  grid-area: _save;
+}
+#dialog > div:has(> #cancel) {
+  grid-area: _cancel;
+}
+#dialog > .color > .color-square {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+#dialog > .color > .value {
+  color: var(--white-color);
+  width: 2.25rem;
+  text-align: right;
+  font: normal 500 1.6rem "Teko", sans-serif;
+}
+#dialog > div > #text {
+  font-size: 1.3rem !important;
+  padding: 0.2rem;
+}
+#dialog > div > #save,
+#dialog > div > #cancel,
+#dialog > div > #text {
+  border: 0;
+  font: normal 500 1.6rem "Teko", sans-serif;
+  outline: none;
+  width: 100%;
+}
+#dialog > div > button {
+  background-color: var(--button-color);
+  color: var(--white-color);
+  transition: all 400ms ease-in-out;
+}
+#dialog > div > button:hover:enabled {
+  background-color: var(--white-color);
+  color: var(--button-color);
+}
+#dialog > div > button:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+#overlay {
+  background-color: var(--white-color);
+  opacity: 0.3;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
+
+@media screen and (min-width: 480px) {
+  #dialog {
+    width: 452px;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "_header  _header"
+      "_red     _text"
+      "_green   _save"
+      "_blue    _cancel";
+  }
+}
